@@ -1,0 +1,13 @@
+{
+  "export": true,
+  "guid": "9319794c-25bd-46e1-ac86-b08e2a830aa8",
+  "id": "asym_demoNspecProjectileHitboxStats",
+  "language": "hscript",
+  "pluginMetadata": {
+  },
+  "plugins": [
+  ],
+  "tags": [
+  ],
+  "version": 1
+}

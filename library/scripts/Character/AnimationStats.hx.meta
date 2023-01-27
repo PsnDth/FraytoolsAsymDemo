@@ -1,0 +1,16 @@
+{
+  "export": true,
+  "guid": "796736bd-4c84-40ee-b7bc-4996e6d734f3",
+  "id": "asym_demoAnimationStats",
+  "language": "hscript",
+  "pluginMetadata": {
+    "com.fraymakers.FraymakersMetadata": {
+      "version": "0.1.0"
+    }
+  },
+  "plugins": [
+  ],
+  "tags": [
+  ],
+  "version": 1
+}

@@ -1,0 +1,17 @@
+{
+  "export": true,
+  "guid": "d1cdb3a1-372b-436f-979b-69a732e1ba68",
+  "id": "asym_demoCharacterStats",
+  "language": "hscript",
+  "pluginMetadata": {
+    "com.fraymakers.FraymakersMetadata": {
+      "version": "0.1.2"
+    }
+  },
+  "plugins": [
+    "com.fraymakers.FraymakersMetadata"
+  ],
+  "tags": [
+  ],
+  "version": 1
+}

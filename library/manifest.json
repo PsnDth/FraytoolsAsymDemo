@@ -1,0 +1,53 @@
+{
+  "resourceId": "asym_demo",
+  "content": [{
+    "id": "asym_demo",
+    "name": "Fraynkie",
+    "description": "Just a sweet little baby",
+    "type": "character",
+    "objectStatsId": "asym_demoCharacterStats",
+    "animationStatsId": "asym_demoAnimationStats",
+    "hitboxStatsId": "asym_demoHitboxStats",
+    "scriptId": "asym_demoScript",
+    "costumesId": "asym_demoCostumes",
+    "aiId": "asym_demoAi",
+    "metadata": {
+      "ui":{
+        "entityId":"menu",
+        "render":{
+          "animation":"full",
+          "animation_icon":"icon",
+          "animation_icon_no_palette":"icon_no_palette",
+          "x_offset":0,
+          "y_offset":38
+        },
+        "hud":{
+          "animation":"hud", 
+          "animation_happy":"hud_happy",
+          "animation_sad":"hud_sad",
+          "animation_angry":"hud_angry",
+          "animation_hurt":"hud_hurt"
+        },
+        "css":{
+          "animation":"css",
+          "info":{
+            "game":"Fraymakers (Early Access)",
+            "description":"Just a sweet little baby."
+          }
+        }
+      }
+    }
+  },{
+    "id": "asym_demoAi",
+    "type": "characterAi",
+    "scriptId": "asym_demoAiScript"
+  },{
+    "id": "asym_demoNspecProjectile",
+    "type": "projectile",
+    "objectStatsId": "asym_demoNspecProjectileStats",
+    "animationStatsId": "asym_demoNspecProjectileAnimationStats",
+    "hitboxStatsId": "asym_demoNspecProjectileHitboxStats",
+    "scriptId": "asym_demoNspecProjectileScript",
+    "costumesId": "asym_demoCostumes"
+  }]
+}

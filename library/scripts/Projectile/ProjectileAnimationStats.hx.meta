@@ -1,0 +1,13 @@
+{
+  "export": true,
+  "guid": "e023e0fd-fe4f-4404-b7b7-3f60ba1086bd",
+  "id": "asym_demoNspecProjectileAnimationStats",
+  "language": "hscript",
+  "pluginMetadata": {
+  },
+  "plugins": [
+  ],
+  "tags": [
+  ],
+  "version": 1
+}
