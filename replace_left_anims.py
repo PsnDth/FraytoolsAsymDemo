@@ -111,7 +111,7 @@ def update_entity_scripts(char_entity, asset_map):
         if keyframe["$id"] not in keyframes:
             continue
         code = keyframe["code"] or ""
-        anim_script = f'if (self.isFacingLeft()) self.playAnimation("{keyframes[keyframe["$id"]]}{LEFT_ANIM_SUFFIX}");'
+        anim_script = f'if (self.isFacingLeft()) changeAnimation("{keyframes[keyframe["$id"]]}{LEFT_ANIM_SUFFIX}");'
         if anim_script in code:
             continue
         keyframe["code"] = code + "\r\n" + anim_script;

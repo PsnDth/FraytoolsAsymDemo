@@ -15,6 +15,7 @@
 	skid__left: {},
 	jump_squat__left: {},
 	jump_in__left: {},
+	jump_loop__left: {},
 	jump_midair__left: {},
 	jump_out__left: {},
 	fall_loop__left: {},

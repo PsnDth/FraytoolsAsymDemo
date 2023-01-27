@@ -43,6 +43,45 @@ function onTeardown() {
 
 // --- end general functions
 
+function changeAnimation(animation) {
+    var animStats = {
+        aerialSpeedAcceleration: self.getAnimationStat("aerialSpeedAcceleration"),
+        aerialSpeedCap: self.getAnimationStat("aerialSpeedCap"),
+        attackId: self.getAnimationStat("attackId"),
+        autoRotate: self.getAnimationStat("autoRotate"),
+        bodyStatus: self.getAnimationStat("bodyStatus"),
+        bodyStatusStrength: self.getAnimationStat("bodyStatusStrength"),
+        chargeFramesMax: self.getAnimationStat("chargeFramesMax"),
+        chargeFramesTotal: self.getAnimationStat("chargeFramesTotal"),
+        endType: self.getAnimationStat("endType"),
+        grabLimit: self.getAnimationStat("grabLimit"),
+        gravityMultiplier: self.getAnimationStat("gravityMultiplier"),
+        groundSpeedAcceleration: self.getAnimationStat("groundSpeedAcceleration"),
+        groundSpeedCap: self.getAnimationStat("groundSpeedCap"),
+        immovable: self.getAnimationStat("immovable"),
+        interruptible: self.getAnimationStat("interruptible"),
+        landAnimation: self.getAnimationStat("landAnimation"),
+        landType: self.getAnimationStat("landType"),
+        leaveGroundCancel: self.getAnimationStat("leaveGroundCancel"),
+        metadata: self.getAnimationStat("metadata"),
+        name: self.getAnimationStat("name"),
+        nextAnimation: self.getAnimationStat("nextAnimation"),
+        nextState: self.getAnimationStat("nextState"),
+        pause: self.getAnimationStat("pause"),
+        resetId: self.getAnimationStat("resetId"),
+        resetRotation: self.getAnimationStat("resetRotation"),
+        rotationSpeed: self.getAnimationStat("rotationSpeed"),
+        shadows: self.getAnimationStat("shadows"),
+        slideOff: self.getAnimationStat("slideOff"),
+        solid: self.getAnimationStat("solid"),
+        storedChargePercent: self.getAnimationStat("storedChargePercent"),
+        xSpeedConservation: self.getAnimationStat("xSpeedConservation"),
+        ySpeedConservation: self.getAnimationStat("ySpeedConservation")
+    };
+    self.playAnimation(animation);
+    self.updateAnimationStats(animStats);
+}
+
 
 //Rapid Jab logic
 function jab3Loop(){
