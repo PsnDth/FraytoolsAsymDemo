@@ -26,8 +26,114 @@
 	crouch_loop__left: {},
 	crouch_out__left: {},
 
+	//AIRDASHES
+	airdash_up__left: {},
+	airdash_down__left: {},
+	airdash_forward__left: {},
+	airdash_back__left: {},
+	airdash_forward_up__left: {},
+	airdash_forward_down__left: {},
+	airdash_back_up__left: {},
+	airdash_back_down__left: {},
 
+	//DEFENSE
+	shield_in__left: {},
+	shield_loop__left: {},
+	shield_hurt__left: {},
+	shield_out__left: {}, 
+	parry_in__left: {},
+	parry_success__left: {},
+	parry_fail__left: {},
+	roll__left: {},
+	spot_dodge__left: {},
 
+	//ASSIST CALL
+	assist_call__left: {},
+	assist_call_air__left: {},
+
+	//LIGHT ATTACKS
+	jab1__left: {},
+	jab2__left: {},
+	jab3__left: {},
+	dash_attack__left: {},
+	tilt_forward__left: {},
+	tilt_up__left: {},
+	tilt_down__left: {},
+
+	//STRONG ATTACKS
+	strong_forward_in__left: {},
+	strong_forward_charge__left: {},
+	strong_forward_attack__left: {},
+	strong_up_in__left: {},
+	strong_up_charge__left: {},
+	strong_up_attack__left: {},
+	strong_down_in__left: {},
+	strong_down_charge__left: {},
+	strong_down_attack__left: {},
+
+	//AERIAL ATTACKS
+	aerial_neutral__left: {},
+	aerial_forward__left: {},
+	aerial_back__left: {},
+	aerial_up__left: {},
+	aerial_down__left: {},
+
+	//AERIAL ATTACK LANDING
+	aerial_neutral_land__left: {},
+	aerial_forward_land__left: {},
+	aerial_back_land__left: {},
+	aerial_up_land__left: {},
+	aerial_down_land__left: {},
+
+	//SPECIAL ATTACKS
+	special_neutral__left: {},
+	special_neutral_air__left: {},
+	special_up__left: {},
+	special_up_air__left: {},
+	special_side__left: {},
+	special_side_air__left: {},
+	special_down__left: {},
+	special_down_loop__left: {},
+	special_down_endlag__left: {},
+	special_down_air__left: {},
+	special_down_air_loop__left: {},
+	special_down_air_endlag__left: {},
+
+	//THROWS
+	grab__left: {},
+	grab_hold__left: {},
+	throw_forward__left: {},
+	throw_back__left: {},
+	throw_up__left: {},
+	throw_down__left: {},
+
+	//HURT ANIMATIONS
+	hurt_light_low__left: {},
+	hurt_light_middle__left: {},
+	hurt_light_high__left: {},
+	hurt_medium__left: {},
+	hurt_heavy__left: {},
+	hurt_thrown__left: {},
+	tumble__left: {},
+
+	//CRASH
+	crash_bounce__left: {},
+	crash_loop__left: {},
+	crash_get_up__left: {},
+	crash_attack__left: {},
+	crash_roll__left: {},
+
+	//LEDGE
+	ledge_in__left: {},
+	ledge_loop__left: {},
+	ledge_roll__left: {},
+	ledge_climb__left: {},
+	ledge_attack__left: {},
+
+	//MISC
+	revival__left: {},
+
+	/// RIGHT FACING ANIMS
 	//MOTIONS
 	stand: {},
 	stand_turn: {},

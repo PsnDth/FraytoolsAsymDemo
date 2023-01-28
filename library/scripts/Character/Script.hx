@@ -49,6 +49,7 @@ function changeAnimation(animation) {
         aerialSpeedCap: self.getAnimationStat("aerialSpeedCap"),
         attackId: self.getAnimationStat("attackId"),
         allowFastFall: self.getAnimationStat("allowFastFall"),
+        allowJump: self.getAnimationStat("allowJump"),
         allowMovement: self.getAnimationStat("allowMovement"),
         allowTurnOnFirstFrame: self.getAnimationStat("allowTurnOnFirstFrame"),
         autoRotate: self.getAnimationStat("autoRotate"),
