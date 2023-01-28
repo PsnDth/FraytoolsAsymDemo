@@ -4,6 +4,22 @@ Asymmetrical Fraynkie
 Modified version of assist template but uses asymmetrical sprites.
 To demonstrate that it's possible, and how to set it up
 
+Known Quirks
+------------
+I will probably come back and test/fix these situations but they are relatively minor. 
+So hopefully can focus more on documenting workflow in the meantime.
+
+- medium hurt rotates your character which means they could change directions
+    - should run the code turnaround handling code everywhere that this is used
+- intro does not play use asymmetric sprite
+    - unsure why, current suspicion is that the intro isn't actually played from f1
+- sometimes audio clips play twice
+    - turnaround check should come first, not last, for each frame script. 
+      This will ensure no double dipping
+
+
+Automating Entity Setup
+=======================
 
 Also includes script for replacing left animation assets with the correct sprite.
 
@@ -14,7 +30,7 @@ DISCLAIMER: I see the following warning when opening fraytools:
 so use the script with caution ... doesn't seem to impact anything though.
 
 Pre-requisites
-==============
+--------------
 - script requires Python 3 installed
 - directory with right-facing sprites
 - directory of left-facing sprites with same names as right-facing ones
@@ -23,7 +39,7 @@ Pre-requisites
         - this is can't be done automatically since the position also needs to change
 
 Workflow
-========
+--------
 - Open fraytools with the sprite directories setup, and save 
     - This setups up the metadata
 - Duplicate any right-facing animation and change the name from `<animation> (copy)` to `<animation>__left`
