@@ -36,15 +36,18 @@ function initialize(){
 }
 
 function update(){
-    if (self.getAnimationStat("allowTurnOnFirstFrame")) {
-        var anim = self.getAnimation();
-        var frame_num = self.getCurrentFrame();
-        if (frame_num == 2 && isLeftAnim(anim) != self.isFacingLeft()) {
+    // This is a fallback if the first frame of the previous anim didn't handle the flipping
+    // Examples of where this is needed:
+    // - intro (probably a bug in API/engine)
+    // - allowTurnOnFirstFrame and player actually reverses the direction
+    var anim = self.getAnimation();
+    var frame_num = self.getCurrentFrame();
+    if (isLeftAnim(anim) != self.isFacingLeft()) {
+        if (self.hasAnimation(getOppositeAnim(anim))) {
             changeAnimation(getOppositeAnim(anim));
-            self.playFrame(2);
+            self.playFrame(frame_num);
         }
     }
-
 }
 
 // CState-based handling for LINK_FRAMES

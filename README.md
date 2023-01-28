@@ -9,13 +9,8 @@ Known Quirks
 I will probably come back and test/fix these situations but they are relatively minor. 
 So hopefully can focus more on documenting workflow in the meantime.
 
-- medium hurt rotates your character which means they could change directions
-    - should run the code turnaround handling code everywhere that this is used
-- intro does not play use asymmetric sprite
-    - unsure why, current suspicion is that the intro isn't actually played from f1
-- sometimes audio clips play twice
-    - turnaround check should come first, not last, for each frame script. 
-      This will ensure no double dipping
+- animations that are looped by the engine will only run left facing frame scripts once!
+    - unclear why this is or how to fix ...
 
 
 Automating Entity Setup
