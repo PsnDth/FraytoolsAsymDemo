@@ -18,6 +18,9 @@ Pre-requisites
 - script requires Python 3 installed
 - directory with right-facing sprites
 - directory of left-facing sprites with same names as right-facing ones
+    - these sprites should still "face the right" but have whatever differences only apply to the left side
+    - alternatively in fraytools, can manually change the scale to flip the sprites after running the steps below
+        - this is can't be done automatically since the position also needs to change
 
 Workflow
 ========

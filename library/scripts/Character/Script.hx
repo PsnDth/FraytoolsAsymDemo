@@ -14,15 +14,9 @@ var NSPEC_PROJ_Y_OFFSET = -50;
 var NEUTRAL_SPECIAL_COOLDOWN = 60;
 var LEFT_ANIM_SUFFIX = "__left";
 
-// start general functions --- 
-
-//Runs on object init
-function initialize(){
-    self.addEventListener(GameObjectEvent.LINK_FRAMES, handleLinkFrames, {persistent:true});
-}
-
+// start helper functions ---
 function isLeftAnim(anim: String) {
-    // Try to find __left in animation name
+    // Try to find LEFT_ANIM_SUFFIX in animation name
     return anim.indexOf(LEFT_ANIM_SUFFIX, anim.length - LEFT_ANIM_SUFFIX.length) != -1;
 }
 
@@ -30,8 +24,15 @@ function getOppositeAnim(anim: String) {
     if (isLeftAnim(anim)) {
         return anim.substr(0, anim.length - LEFT_ANIM_SUFFIX.length);
     } else {
-        return anim + "__left";
+        return anim + LEFT_ANIM_SUFFIX;
     }
+}
+
+// start general functions --- 
+
+//Runs on object init
+function initialize(){
+    self.addEventListener(GameObjectEvent.LINK_FRAMES, handleLinkFrames, {persistent:true});
 }
 
 function update(){
@@ -66,6 +67,8 @@ function onTeardown() {
 // --- end general functions
 
 function changeAnimation(animation) {
+    // NOTE: Copies all animation stats, this is technically dumb for `name` & `attackId` 
+    //       but doesn't do any harm it seems
     var animStats = {
         // AnimationStats
         aerialSpeedAcceleration: self.getAnimationStat("aerialSpeedAcceleration"),
@@ -194,7 +197,6 @@ function specialDown_gotoLoop(){
     } else {
         self.playAnimation("special_down_air_loop");
     }
-
     //failsafe
     specialDown_resetTimer();
 
