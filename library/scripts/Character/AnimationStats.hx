@@ -93,10 +93,10 @@
 	special_side__left: {},
 	special_side_air__left: {},
 	special_down__left: {},
-	special_down_loop__left: {},
+	special_down_loop__left: {endType:AnimationEndType.LOOP}, // TODO: This shouldn't be necessary but animation gets stuck
 	special_down_endlag__left: {},
 	special_down_air__left: {},
-	special_down_air_loop__left: {},
+	special_down_air_loop__left: {endType:AnimationEndType.LOOP}, // TODO: This shouldn't be necessary but animation gets stuck
 	special_down_air_endlag__left: {},
 
 	//THROWS

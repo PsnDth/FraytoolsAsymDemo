@@ -12,6 +12,7 @@ var NSPEC_PROJ_X_OFFSET = 40;
 var NSPEC_PROJ_Y_OFFSET = -50;
 
 var NEUTRAL_SPECIAL_COOLDOWN = 60;
+var LEFT_ANIM_SUFFIX = "__left";
 
 // start general functions --- 
 
@@ -20,7 +21,28 @@ function initialize(){
     self.addEventListener(GameObjectEvent.LINK_FRAMES, handleLinkFrames, {persistent:true});
 }
 
+function isLeftAnim(anim: String) {
+    // Try to find __left in animation name
+    return anim.indexOf(LEFT_ANIM_SUFFIX, anim.length - LEFT_ANIM_SUFFIX.length) != -1;
+}
+
+function getOppositeAnim(anim: String) {
+    if (isLeftAnim(anim)) {
+        return anim.substr(0, anim.length - LEFT_ANIM_SUFFIX.length);
+    } else {
+        return anim + "__left";
+    }
+}
+
 function update(){
+    if (self.getAnimationStat("allowTurnOnFirstFrame")) {
+        var anim = self.getAnimation();
+        var frame_num = self.getCurrentFrame();
+        if (frame_num == 2 && isLeftAnim(anim) != self.isFacingLeft()) {
+            changeAnimation(getOppositeAnim(anim));
+            self.playFrame(2);
+        }
+    }
 
 }
 
@@ -45,13 +67,10 @@ function onTeardown() {
 
 function changeAnimation(animation) {
     var animStats = {
+        // AnimationStats
         aerialSpeedAcceleration: self.getAnimationStat("aerialSpeedAcceleration"),
         aerialSpeedCap: self.getAnimationStat("aerialSpeedCap"),
         attackId: self.getAnimationStat("attackId"),
-        allowFastFall: self.getAnimationStat("allowFastFall"),
-        allowJump: self.getAnimationStat("allowJump"),
-        allowMovement: self.getAnimationStat("allowMovement"),
-        allowTurnOnFirstFrame: self.getAnimationStat("allowTurnOnFirstFrame"),
         autoRotate: self.getAnimationStat("autoRotate"),
         bodyStatus: self.getAnimationStat("bodyStatus"),
         bodyStatusStrength: self.getAnimationStat("bodyStatusStrength"),
@@ -80,7 +99,18 @@ function changeAnimation(animation) {
         solid: self.getAnimationStat("solid"),
         storedChargePercent: self.getAnimationStat("storedChargePercent"),
         xSpeedConservation: self.getAnimationStat("xSpeedConservation"),
-        ySpeedConservation: self.getAnimationStat("ySpeedConservation")
+        ySpeedConservation: self.getAnimationStat("ySpeedConservation"),
+        // CharacterAnimationStats
+        allowFastFall: self.getAnimationStat("allowFastFall"),
+        allowJump: self.getAnimationStat("allowJump"),
+        allowMovement: self.getAnimationStat("allowMovement"),
+        allowTurn: self.getAnimationStat("allowTurn"),
+        allowTurnOnFirstFrame: self.getAnimationStat("allowTurnOnFirstFrame"),
+        autocancel: self.getAnimationStat("autocancel"),
+        doubleJumpCancel: self.getAnimationStat("doubleJumpCancel"),
+        grabLedgeBehind: self.getAnimationStat("grabLedgeBehind"),
+        grabLedgeRising: self.getAnimationStat("grabLedgeRising"),
+        singleUse: self.getAnimationStat("singleUse")
     };
     self.playAnimation(animation);
     self.updateAnimationStats(animStats);
