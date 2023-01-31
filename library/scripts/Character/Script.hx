@@ -69,7 +69,7 @@ function onTeardown() {
 
 // --- end general functions
 
-function changeAnimation(animation) {
+function changeAnimation(animation: String) {
     // NOTE: Copies all animation stats, this is technically dumb for `name` & `attackId` 
     //       but doesn't do any harm it seems
     var animStats = {
@@ -120,6 +120,10 @@ function changeAnimation(animation) {
     };
     self.playAnimation(animation);
     self.updateAnimationStats(animStats);
+}
+
+function changeToLeftAnimation() {
+    changeAnimation(self.getAnimation() + LEFT_ANIM_SUFFIX);
 }
 
 
